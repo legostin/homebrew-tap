@@ -5,20 +5,20 @@
 class Cull < Formula
   desc "Interactive disk space analyzer for macOS and Linux"
   homepage "https://github.com/legostin/cull"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/legostin/cull/releases/download/v0.5.0/cull_darwin_amd64.tar.gz"
-      sha256 "7e2fd3e904f530b59040c4a1f4b6181367670518656d93a5bb41485441822bb1"
+      url "https://github.com/legostin/cull/releases/download/v0.5.1/cull_darwin_amd64.tar.gz"
+      sha256 "5b755b65c7401ebf7dfbe54eb9fb03ba4eb00574482dd593a232b250b24b06a9"
 
       def install
         bin.install "cull"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/legostin/cull/releases/download/v0.5.0/cull_darwin_arm64.tar.gz"
-      sha256 "5316c5ce4c4e15f0e35eae819ac0390d4b3137841aeae82b0f563b1083647c83"
+      url "https://github.com/legostin/cull/releases/download/v0.5.1/cull_darwin_arm64.tar.gz"
+      sha256 "a26b854a7600909d23905a3c5e3deb6e243a12bb35bb0ecbeaa9a62fb9a5887d"
 
       def install
         bin.install "cull"
@@ -28,15 +28,15 @@ class Cull < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/legostin/cull/releases/download/v0.5.0/cull_linux_amd64.tar.gz"
-      sha256 "c0e56ea82a55f36864a604112c545cfc63ba992d230805227d1f135ce9d3e0b3"
+      url "https://github.com/legostin/cull/releases/download/v0.5.1/cull_linux_amd64.tar.gz"
+      sha256 "f34880f936908359ce6f890ab66bc921a6d01373e1ad0ff19b47b9c691012660"
       def install
         bin.install "cull"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/legostin/cull/releases/download/v0.5.0/cull_linux_arm64.tar.gz"
-      sha256 "f4f631addef08132e437826e7b8f9b537a08d9702279ac5dffcc5813cdaa5824"
+      url "https://github.com/legostin/cull/releases/download/v0.5.1/cull_linux_arm64.tar.gz"
+      sha256 "99a84fba04f4fbecfd2b79a3a46c2b31d65ce8f44a5604e181d6db6c1cd5b8e7"
       def install
         bin.install "cull"
       end
