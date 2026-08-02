@@ -10,17 +10,17 @@ class Cull < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/legostin/cull/releases/download/v0.8.0/cull_darwin_amd64.tar.gz"
-      sha256 "9436841b7ecdffd2d6a0c54ef1c3f4ab9a624fd99dcbf8e9dc0535fddb2fea8f"
+      sha256 "3365e1e3e6b1d1f44fbd9221ace6b9850c6670f1de8cb13cede9831bc1e7ddb2"
 
-      def install
+      define_method(:install) do
         bin.install "cull"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/legostin/cull/releases/download/v0.8.0/cull_darwin_arm64.tar.gz"
-      sha256 "4bfe220deafdd608c64ed314fbd7fb81b38092221b4624ab0fc9fee7025029fb"
+      sha256 "71e332d4e82584651a5e0bbfafaa9c52832532389b016ec32b7ca2f8017056a9"
 
-      def install
+      define_method(:install) do
         bin.install "cull"
       end
     end
@@ -29,15 +29,15 @@ class Cull < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/legostin/cull/releases/download/v0.8.0/cull_linux_amd64.tar.gz"
-      sha256 "99d071298562831222db0a43f82cd36bde78a91845cca727322d859e4ff655ec"
-      def install
+      sha256 "aec7a43da71d0013fbdaa5fc1bf1e1ca8cfd05477c3bdcd38bbdbd97e8b4dee9"
+      define_method(:install) do
         bin.install "cull"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/legostin/cull/releases/download/v0.8.0/cull_linux_arm64.tar.gz"
-      sha256 "08436ef16806a8916c249b424e6d9faaa78cf7d84a28b4a8e739725bc2488a05"
-      def install
+      sha256 "9d7b61132e0545f79c16ea21f5b088d62ee28910966aff42e328e1d0ee0c9520"
+      define_method(:install) do
         bin.install "cull"
       end
     end
