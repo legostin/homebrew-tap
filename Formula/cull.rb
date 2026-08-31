@@ -5,20 +5,20 @@
 class Cull < Formula
   desc "Interactive disk space analyzer for macOS and Linux"
   homepage "https://github.com/legostin/cull"
-  version "0.8.1"
+  version "0.9.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/legostin/cull/releases/download/v0.8.1/cull_darwin_amd64.tar.gz"
-      sha256 "7c000483f0557dce7bc48cbfc5309d1432fb5820d0db359c5e394495bec4357e"
+      url "https://github.com/legostin/cull/releases/download/v0.9.0/cull_darwin_amd64.tar.gz"
+      sha256 "cf4bd87d72dbdbf2c25903593745d9f4487b9a15d38b33aa03be42835e0924af"
 
       define_method(:install) do
         bin.install "cull"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/legostin/cull/releases/download/v0.8.1/cull_darwin_arm64.tar.gz"
-      sha256 "5eaad711ff736cd12406f81d072e3337c0395b73c06aa797c731273505469cd0"
+      url "https://github.com/legostin/cull/releases/download/v0.9.0/cull_darwin_arm64.tar.gz"
+      sha256 "99bcf9e57c66271eed1fe9b1244ceb40a320cc6ccedb6c1b34bcbad48fb89727"
 
       define_method(:install) do
         bin.install "cull"
@@ -28,15 +28,15 @@ class Cull < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/legostin/cull/releases/download/v0.8.1/cull_linux_amd64.tar.gz"
-      sha256 "aed5de0444a827dbae84fd78591c3ccd813feee18ff8c8d70772314f119a9521"
+      url "https://github.com/legostin/cull/releases/download/v0.9.0/cull_linux_amd64.tar.gz"
+      sha256 "0c2e555b4de75fcc547559b12fbfb2b04def160b1b1f9faefc1e8cb7f41c7769"
       define_method(:install) do
         bin.install "cull"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/legostin/cull/releases/download/v0.8.1/cull_linux_arm64.tar.gz"
-      sha256 "4001d9f1df0182aa5f1f46183da5da0ab1d1c01a3fe50c88c44c2e2639057d1c"
+      url "https://github.com/legostin/cull/releases/download/v0.9.0/cull_linux_arm64.tar.gz"
+      sha256 "d34cc6bf9c21a4cf005b00caff7fc275a83b4e09390a27c847df309c8d816e08"
       define_method(:install) do
         bin.install "cull"
       end
